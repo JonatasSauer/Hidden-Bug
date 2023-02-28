@@ -1,0 +1,461 @@
+
+
+/*-- estilo conteudo --*/
+
+main#home-content{
+  transition:1s;
+/*   margin-top: 150vh; */
+}
+
+section.principal-section{
+	width: 100vw;
+	min-height: calc(100vh - 70px);
+  margin-bottom: 100px;
+	display: flex;
+	flex-wrap: wrap;
+  margin-top: 75px;
+}
+
+
+div.linguage-logo{
+	min-width: 50%;
+	min-height: 100%;
+	display: flex;
+	align-items: center;
+  justify-content:start;
+}
+
+div.linguage-logo img{
+	width: 450px;
+	position: relative;
+	animation: is-pulse 4s alternate infinite;
+}
+
+@keyframes is-pulse{
+	0%{
+		top: 0;
+	}
+
+	50%{
+		top: 15px;
+	}
+
+	100%{
+		top: 0;
+	}
+}
+
+div.description-start{
+	min-width: 50%;
+	min-height: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+div.text-description{
+	width: 400px;
+	height: 200px;
+	font-size: 1.3rem;
+	
+}
+
+div.text-description h2{
+	line-height: 40px;
+	color: #E5C211;
+  font-size: 2.2rem;
+	font-weight: bold;
+}
+div.text-description p{
+	color: #ddd;
+  font-size: 1.7rem;
+	font-weight: bold;
+}
+
+div.text-description button{
+  background: linear-gradient( #E5C211, orange);
+  color: #222;
+  margin:20px 120px;
+  padding: 10px 15px;
+  border: 1px #111 solid;
+  border-radius: 20px;
+  box-shadow: 4px 3px 2px #111;
+  font-weight: bold;
+  transition: .5s;
+}
+
+div.text-description button:hover{
+  scale: 1.04;
+  cursor: url(../cursor/link.cur),default;
+}
+
+/* -- estilo carrosel--*/
+
+
+section.carrosel-linguagens{
+  max-width: 950px;
+  height: 100vh;
+  margin: 0 auto;
+
+}
+
+div.flex-carrosel{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: space-center;
+  align-items: center;
+}
+
+section.carrosel-linguagens #title-carrosel{
+  font-size: 1.7rem;
+  text-align: center;
+  margin-bottom: -220px;
+  color:#bbb;
+}
+
+.container {
+    position: relative;
+    width: 320px;
+    margin: 0px auto 100px auto;
+    perspective: 2500px;
+    /*-- Criando profundidade no eixo z --*/
+}
+
+div.button-left{
+  scale: 1.7;
+  border-radius: 50%;
+  box-shadow: 1px 1px 5px #555;
+  color: #aaa;
+  transition: .8s;
+  position:relative;
+  top:60px;
+}
+
+div.button-left:hover{
+  transition-delay: .4s;
+  color: #fff;
+  padding-right:2px;
+  cursor: url(../cursor/link.cur),default;
+}
+
+div.button-right{
+  scale: 1.7;
+  border-radius: 50%;
+  box-shadow: 1px 1px 5px #555;
+  color: #aaa;
+  transition: .8s;
+  position:relative;
+  top:60px;
+}
+
+div.button-right:hover{
+  transition-delay: .4s;
+  color: #fff;
+  padding-left:2px;
+  cursor: url(../cursor/link.cur),default;
+}
+
+.carrosel {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d;
+    transition: 1s;
+    scale:.8;
+}
+
+.imagem {
+    position: absolute;
+    width: 290px;
+    height: 187px;
+    top: 40px;
+    left: 10px;
+    right: 10px;
+    background-size: cover;
+    display: flex;
+    transition: .6s;
+
+}
+
+.imagem:hover{  
+  rotate: 1deg;
+  scale: 1.03;
+}
+
+
+/*-- tratamento de imagem --*/
+
+.imagem:nth-child(1){
+    background-image: url(../img/logojs.png);
+    transform: rotateX(0deg) translateZ(470px);
+    background-size: 100% 100%;
+}
+
+.imagem:nth-child(2){
+    background-image: url(../img/logophp.png);
+    transform: rotateY(36deg) translateZ(470px);
+    background-size: 100% 100%;
+}
+
+.imagem:nth-child(3){
+    background-image: url(../img/python-removebg-preview.png);
+    transform: rotateY(72deg) translateZ(470px);
+    background-size: 100% 100%;
+}
+
+.imagem:nth-child(4){
+    background-image: url(../img/CSharp-removebg-preview.png);
+    transform: rotateY(108deg) translateZ(470px);
+    background-size: 100% 100%;
+}
+
+.imagem:nth-child(5){
+    background-image: url(../img/OIP__1_-removebg-preview.png);
+    transform: rotateY(144deg) translateZ(470px);
+    background-size: 100% 100%;
+}
+
+.imagem:nth-child(6){
+    background-image: url(../img/OIP-removebg-preview.png);
+    transform: rotateY(180deg) translateZ(470px);
+    background-size: 450px 400px;
+    background-position: 50% -60px;
+}
+
+.imagem:nth-child(7){
+    background-image: url(../img/ruby-1212.png);
+    transform: rotateY(216deg) translateZ(470px);
+    background-size: 70% 70%;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+
+.imagem:nth-child(8){
+    background-image: url(../img/typescript-removebg-preview.png);
+    transform: rotateY(252deg) translateZ(470px);
+    background-size: 100% 100%;
+}
+
+.imagem:nth-child(9){
+    background-image: url(../img/logomysql.png);
+    transform: rotateY(288deg) translateZ(470px);
+    background-size: 100% 100%;
+}
+
+.imagem:nth-child(10){
+   background-image: url(../img/Java-removebg-preview.png);
+    transform: rotateY(324deg) translateZ(470px);
+    background-size: 80% 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.imagem:nth-child(11){
+  position: relative;
+  top: 10px;
+  left: -350px;
+  width: 1010px;
+  height: 300px;
+  background: linear-gradient(#111,#222); 
+	background-size: 100vw 100vh;
+  background-position: center;
+ 	background-attachment: fixed;
+  transition: 1s;
+  filter: blur(10px);
+}
+
+
+/*-- estilo carrosel infos --*/
+
+div.description-linguages{
+   width: 900px;
+   height:  130px ;
+   margin: -100px auto -200px auto;
+   overflow: hidden;
+}
+
+div.infos{
+  width: 100%;
+  height: 100%;
+  text-align: center;
+}
+
+
+div.infos h2{
+  font-size: 2rem;
+}
+div.infos p{
+  font-size: 1.2rem;
+  text-indent: 20px;
+  text-align: justify;
+}
+
+div#expande-info{
+   margin-top: -1170px ;
+   transition: .2s;
+}
+
+
+div.info-javascript h2{
+    color: #e6ac32;
+    text-shadow: 0px 0px 5px #e6ac32;
+}
+
+div.info-php h2{
+    color: #7d5bef;
+  text-shadow: 0px 0px 5px #7d5bef;
+}
+
+div.info-python h2{
+    color: #cec646;
+  text-shadow: 0px 0px 5px #cec646;
+}
+
+div.info-c h2{
+    color: #c041b1;
+  text-shadow: 0px 0px 5px #c041b1;
+}
+
+div.info-cmais h2{
+    color: #2b63ea;
+  text-shadow: 0px 0px 5px #2b63ea;
+}
+div.info-swift h2{
+    color: #fb7f17;
+  text-shadow: 0px 0px 5px #fb7f17;
+}
+
+div.info-ruby h2{
+    color: #c0261c;
+  text-shadow: 0px 0px 5px #c0261c;
+}
+
+
+div.info-typescript h2{
+    color: #1c82e4;
+  text-shadow: 0px 0px 5px #1c82e4;
+}
+div.info-mysql h2{
+    color: #fc9831;
+  text-shadow: 0px 0px 5px #fc9831;
+}
+
+div.info-java h2{
+    color: #25857d;
+  text-shadow: 0px 0px 5px #25857d;
+}
+
+
+/*-- estilo caixa de perguntas --*/
+
+section.perguntas-linguagens{
+  width: 100vw;
+  height: 600px;
+  padding: 50px 0px;
+  margin-top: -130px;
+}
+
+div.container-perguntas{
+  width: 80%;
+  height: 100%;
+  display:flex;
+  margin: 0 auto;
+}
+
+div.flex-title{
+  width:50vw;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem; 
+  
+}
+
+div.flex-title span{
+  color: #ccc;
+  border-left:2px solid #2b63ea;
+  height: 35px;
+  padding-left: 10px;
+}
+
+div.perguntas{
+  width: 50vw;
+  height: 100%;
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+
+div.perguntas h3{
+  line-height: 40px;
+}
+
+div.perguntas p{
+    color:#ddd;
+}
+
+div.perguntas span{
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #2b63ea;
+
+}
+
+div.perguntas div{
+  width: 500px ;
+  height: 40px;
+  overflow:hidden;
+  transition: .9s;
+  cursor: url(../cursor/help.cur),default;
+}
+
+
+div.perguntas hr{
+  transition: 1s;
+  width: 500px;
+}
+
+div.perguntas .perg1:hover{
+    height:120px;
+}
+
+div.perguntas .perg1:hover ~ .line1{
+  width: 10px;
+}
+
+div.perguntas .perg2:hover{
+    height:120px;
+}
+div.perguntas .perg2:hover ~ .line2{
+  width: 10px;
+}
+
+div.perguntas .perg3:hover{
+    height:150px;
+}
+
+div.perguntas .perg3:hover ~ .line3{
+  width: 10px;
+}
+
+div.perguntas .perg4:hover{
+    height:200px;
+}
+
+div.perguntas .perg4:hover ~ .line4{
+  width: 10px;
+}
+
+
+div.perguntas .perg5:hover{
+    height:270px;
+}
+
+div.perguntas .perg5:hover ~ .line5{
+  width: 10px;
+}
+

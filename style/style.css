@@ -1,0 +1,553 @@
+@import url('https://unpkg.com/css.gg@2.0.0/icons/css/menu-round.css');
+
+@import url('https://unpkg.com/css.gg@2.0.0/icons/css/chevron-double-left-o.css');
+
+@import url('https://unpkg.com/css.gg@2.0.0/icons/css/chevron-double-right-o.css');
+@import url('https://fonts.googleapis.com/css2?family=Rubik+Vinyl&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Maven+Pro&display=swap');
+
+@import url('https://unpkg.com/css.gg@2.0.0/icons/css/close.css');
+
+*{
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+
+
+body{
+	width: 100%;
+	height: 100%;
+	font-family: 'Maven Pro', sans-serif;
+	color: #fff;
+	background: linear-gradient(#111,#222);
+	background-size: cover;
+	background-attachment: fixed;
+  overflow-x: hidden;     
+  cursor: url(../cursor/normal.cur), default;
+  text-shadow: 1px 1px 5px #111;
+}
+
+body::-webkit-scrollbar{
+	background: #444;
+	width: 10px;
+}
+
+body::-webkit-scrollbar-thumb{
+	background: #666;
+  border-radius: 40px;
+  box-shadow: 1px 1px 3px #333;
+}
+
+
+/*-- estilo cabeçalho --*/
+
+header.main-header{
+	width: 100%;
+	height: 70px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 0 50px;
+	position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 5;
+  
+}
+
+div.back-blur-header{
+  width: 100%;
+  height: 70px;
+  position: fixed;
+  left: 0;
+  top: 0;
+  background: linear-gradient(rgba(17,17,17,.9),rgba(34,34,34,.9));
+  background-size: cover;
+	background-attachment: fixed;
+  filter: blur(8px);
+  z-index: 4;
+}
+
+
+div.logo{
+	font-size: 2rem;
+	font-family:  'Rubik Vinyl', cursive;
+}
+
+header.main-header > .navegation{
+	position: fixed;
+	top: 0;
+	left: 100%;
+	transform: translateX(0);
+	background:linear-gradient(#333,#222);
+	background-size: cover;
+	width: 300px;
+	height: 100vh;
+	z-index: 4;
+	transition: .3s;
+	overflow-x: hidden;
+	scroll-behavior: smooth;
+}
+
+div.navegation::-webkit-scrollbar{
+	background: #444;
+	width: 10px;
+}
+
+div.navegation::-webkit-scrollbar-thumb{
+	background: #666;
+    border-radius: 40px;
+    box-shadow: 1px 1px 3px #333;
+}
+
+
+div.navegation li{
+	width: 100%;
+	height: 50px;
+	padding-left: 50px;
+	list-style: none;
+	
+}
+div.navegation li:nth-child(1){
+	width: 100%;
+	height: 70px;
+	list-style: none;
+	display: flex;
+	justify-content: end;
+	align-items: center;
+	padding-right: 37px;
+}
+
+ div.back-blur{
+	position: fixed;
+	top: 0;
+	left: 100%;
+	width: 100vw;
+	height: 100vh;
+	opacity: 100%;
+	background: rgba(0, 0, 0, .8);
+	scale: 0;
+	transition: .2s;
+	z-index: 2;
+}
+
+div.btn-menu{
+	width: 100px;
+	height: 100%;
+	position: relative;
+	display: flex;
+	justify-content: space-around;
+	align-items:center;
+  display: none;
+}
+.gg-menu-round {
+	position: absolute;
+    box-sizing: border-box;
+    display: block;
+    width: 22px;
+    height: 22px;
+    scale: 1.2;
+    border-radius: 24px;
+    border: 2px solid;
+    cursor: url(../cursor/link.cur),default;
+    transition: .3s;
+
+}
+
+#btn-closed{
+	position: absolute;
+	left: 80%;
+}
+
+
+
+div.pop-up{
+	position: absolute;
+	left: 90%;
+	transform: translateX(-100px);
+	opacity: 0;
+	scale: 0.8;
+	padding: 10px 15px;
+	background: #222;
+	box-shadow: 1px 1px 4px #222;
+	border-radius: 10px;
+	transition-duration: .3s;
+	font-family: 'Maven Pro', sans-serif;
+	
+}
+.gg-menu-round:hover ~ .pop-up{
+	transition-delay: .8s;
+	opacity: 100%;
+	scale: 1;
+}
+.gg-menu-round:hover{
+	color: #aaa;
+}
+
+/*-- Estilo rodapé --*/
+
+
+footer.main-footer{
+  width: 100vw;
+  height: 140px;
+  display:flex;
+  background: #333;
+	background-size: cover;
+  background-attachment:fixed;
+}
+
+div.logo-footer{
+  width:25%;
+  height:100%;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+}
+
+div.terms span{
+   color: #888;
+  font-weight: bold;
+  letter-spacing: .5px; 
+  transition: .4s;
+}
+
+div.terms hr{
+  width: 0px;
+  margin: 0 auto;
+  transition: .5s;
+  opacity: 0;
+}
+
+div.terms span:hover{
+  color: #ddd;
+  letter-spacing: .7px;
+}
+
+div.terms span:hover ~ hr{
+  background: #ddd;
+  width: 140px;
+  opacity: 100%;
+}
+
+div.infos-project{
+  width:40%;
+  height:100%;
+}
+
+div.contact{
+  width:25%;
+  height:100%;
+  display:flex;
+  flex-direction:column;
+  align-items:flex-end;
+  justify-content:center;
+  gap: 10px;
+}
+div.title-nav{
+  text-align:center;
+  line-height:30px;
+}
+
+div.contact li{ 
+  display:inline-block;
+  list-style:none;
+  margin:10px;
+  scale:1.4;
+  cursor: url(../cursor/working.cur),default;
+  transition:.8s;
+  border-radius:50%;
+}
+li#icon-linkedin {
+  border-radius:0%;
+}
+li#icon-linkedin:hover{
+  color:#2b63ea;
+  background:#fff;
+  width:15px;
+  scale:1.5;
+  height:15px;
+}
+
+li#icon-github:hover{
+  color:#000;
+  background:#fff;
+  width:15px;
+  scale:1.6;
+  height:15px;
+  border-radius:50%;
+}
+
+li#icon-whats:hover{
+  color:#fff;
+  background:#3ddb8f;
+  width:15px;
+  scale:1.6;
+  height:15px;
+  border-radius:50%;
+  box-shadow:1px 1px 5px #000;
+}
+div.contact span{
+  color:#bbb;
+  text-align:center;
+  transition:.8s;
+}
+
+
+/*-- Estilo das redes de contato --*/
+
+/* 
+    cor linkedin  
+
+  background: rgba(43, 99, 234, .8);
+  box-shadow: 0px 0px 10px #2b63ea;
+  border: 2px solid #2b63ea;
+
+    cor github
+
+  background: rgba(0, 0, 0, .8);
+  box-shadow: 0px 0px 10px #000;
+  border:2px solid #222;
+
+    cor whatsapp
+
+  background: rgba(18, 179, 105, .8);
+  border:solid 2px #12B269;
+  box-shadow: 0px 0px 10px #12B269;
+*/
+
+div.container-redirect{
+  width: 600px;
+  height: 500px;
+  position:fixed;
+  top:-50%;
+  left:50%;
+  transform:translate(-50%, -50%);
+  overflow: hidden;
+  transition: ease-in-out .7s ;
+  perspective:1500px;
+  text-align:center;
+}
+
+div.container-redirect span{
+  width:100%;
+   text-align:center;
+   font-weight:bold;
+}
+
+div.contact-navegation{
+  width: 100%;
+  height: 10%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+}
+
+div.contact-navegation svg{
+  scale: 1.8;
+  transition:.4s;
+}
+
+div.flex-redirect{
+  height: 90%;
+  display: flex;
+  position: absolute;
+  transition: ease-in-out .8s ;
+}
+
+/*-- Redirect linkedin --*/
+
+div.redirect-linkedin{
+   width: 600px;
+   height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+div.redirect-linkedin > .page-linkedin{
+  width: 90%;
+  height: 70%;
+  overflow-x:hidden;
+}
+
+div.page-linkedin img{
+  width: 100%;
+  box-shadow: 0px 0px 10px #0300BA;
+}
+
+div.button-redirect{
+   width: 100%;
+  height: 20%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  
+}
+
+div.button-redirect button{
+  width: 40%;
+  height: 60%;
+  border:none;
+  cursor: url(../cursor/link.cur),default;
+  font-size: 1.1rem;
+  box-shadow: 0px 0px 10px #0300BA;
+  border-radius: 50px;
+}
+
+button#voltar-linkedin{
+  border: 2px solid #2b63ea;
+  color: #2b63ea;
+}
+
+button#next-linkedin{
+  border: 2px solid #fff;
+  background: #2b63ea;
+ 
+}
+
+button#next-linkedin a{
+  text-decoration: none;
+  color: #fff;
+  padding: 18px 68px;
+  cursor: url(../cursor/link.cur),default;
+}
+
+/*-- Redirect github --*/
+
+div.redirect-github{
+   width: 600px;
+   height: 100%;
+   display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+div.redirect-github > .page-github{
+  width: 90%;
+  height: 70%;
+  overflow:hidden;
+  transform:rotateY(180deg);
+}
+
+div.page-github img{
+  width: 100%;
+  box-shadow: 0px 0px 10px #000;
+  
+}
+
+button#voltar-github{
+  border: 2px solid #222;
+  color: #222;
+  box-shadow: 0px 0px 5px #222;
+  transform:rotateY(180deg);
+  order:2;
+}
+
+button#next-github{
+  border: 1px solid #fff;
+  background: #222;
+  box-shadow: 0px 0px 5px #222;
+  transform:rotateY(180deg);
+  order:1;
+}
+
+button#next-github a{
+  text-decoration: none;
+  color: #fff;
+  padding: 18px 68px;
+  cursor: url(../cursor/link.cur),default;
+    transform:rotateY(180deg);
+}
+
+/*-- Redirect Whatsapp --*/
+
+
+div.redirect-whats{
+   width: 600px;
+   height: 100%;
+   display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+div.redirect-whats > .page-whats{
+  width: 55%;
+  height: 70%;
+  overflow-x:hidden;
+  display: flex;
+  justify-content: center;
+}
+
+.page-whats::-webkit-scrollbar{
+	background: #095935;
+	width: 10px;
+}
+
+.page-whats::-webkit-scrollbar-thumb{
+	background: #063D24;
+  border-radius: 40px;
+  box-shadow: 1px 1px 3px #0B7043;
+}
+div.page-whats img{
+  width: 350px;
+  height: 660px;
+  box-shadow: 0px 0px 10px #12B269;
+}
+
+button#voltar-whats{
+  border: 2px solid #0E8A52;
+  color: #0E8A52;
+  box-shadow: 0px 0px 5px #0E8A52; 
+}
+
+button#next-whats{
+  border: 1px solid #fff;
+  background: #0E8A52;
+  box-shadow: 0px 0px 5px #0E8A52;
+}
+
+button#next-whats a{
+  text-decoration: none;
+  color: #fff;
+  padding: 18px 68px;
+  cursor: url(../cursor/link.cur),default;
+}
+
+/*-- estilo termos --*/
+
+div.termos{
+  width: 100vw;
+  height: 100vh;
+
+  position: fixed;
+  top:52%;
+  left:50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  scale: 0;
+  transition: .6s;
+}
+
+div.termos > #termos-page{
+  width: 600px;
+  height:550px;
+}
+
+
+
+
+

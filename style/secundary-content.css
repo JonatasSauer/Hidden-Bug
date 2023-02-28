@@ -1,0 +1,563 @@
+section.container-content{
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  position: fixed;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  z-index: -2;
+  transition: .7s; 
+  transition-delay: .5s;
+  scale: .9;
+  transform: rotateY(90deg) ;
+  perspective: 700px;
+  margin-left: 100px;
+ 
+}
+
+div.cards {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  text-shadow: 1px 1px 5px #666;
+  opacity: 0; 
+  transition: 1s;  
+  perspective:2000px;
+  transform:rotateY(90deg);
+}
+
+div.flex-explication{
+  width:50vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+div.flex-explication h2{
+  font-size: 2rem ;
+}
+
+div.flex-explication h3{
+  font-size: 1.8rem ;
+}
+div.flex-explication p{
+  max-width: 550px;
+  font-size: 1.3rem;
+  text-align: justify;
+  text-indent: 50px;
+}
+
+div.flex-picture{
+  width:50vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+div.flex-picture img{
+  width:700px;
+  position: relative;
+  animation: is-pulse 4s alternate infinite;
+}
+
+
+
+/*-- estilo individual dos cards --*/
+
+
+div.card1{
+  transition: 1s;
+  opacity: 100;
+  transform:rotateY(0deg);
+}
+
+
+div.card1 h2{
+   color: #E1B105;
+}
+
+div.card1 span{
+  color: #E1B105;
+}
+
+div.card1 img{
+  width: 450px;
+}
+
+
+div.card1 button{
+  background: linear-gradient( #E5C211, orange);
+  color: #222;
+  margin:20px 120px;
+  padding: 10px 15px;
+  border: 1px #111 solid;
+  border-radius: 20px;
+  box-shadow: 4px 3px 2px #111;
+  font-weight: bold;
+  transition: .5s; 
+  cursor: url(../cursor/link.cur),default;
+  
+}
+
+div.card1 button:hover{
+  scale: 1.04;
+}
+
+/*   card 2  */
+
+div.card2{
+  transform:rotateY(90deg)
+}
+
+div.card2 .flex-explication{
+  width:100vw;
+  scale: 1.2;
+}
+div.card2 h3{
+   color: #8249E5;
+}
+
+
+div.card2 span{
+  color: #8249E5;
+}
+
+div.card2 button:nth-child(1){
+  background: linear-gradient( #222, #333);
+  color: #8249E5;
+  text-shadow: 1px 1px 3px #000;
+  letter-spacing: .5px;
+  margin:20px 20px;
+  padding: 10px 15px;
+  border: 1px  #8249E5 solid;
+  border-radius: 20px;
+  box-shadow: 4px 3px 2px #111;
+  font-weight: bold;
+  transition: .5s; 
+  cursor: url(../cursor/link.cur),default;
+  scale: 1;
+}
+
+div.card2 button{
+  background: linear-gradient( #8249E5, #8240a0);
+  color: #ddd;
+  text-shadow: 1px 1px 3px #000;
+  letter-spacing: .5px;
+  margin:20px 20px;
+  padding: 10px 15px;
+  border: 1px #111 solid;
+  border-radius: 20px;
+  box-shadow: 4px 3px 2px #111;
+  font-weight: bold;
+  transition: .5s; 
+  cursor: url(../cursor/link.cur),default;
+  scale: .9;
+}
+
+div.card2 button:hover{
+  scale: 1;
+}
+
+/* --  card 2 -- */
+
+div.card3 h3{
+   color: #E6153E;
+}
+
+div.card3 .flex-explication{
+  padding-right: 50px;
+   order: 1;
+}
+
+div.card3 span{
+  color:#E6153E;
+}
+div.card3 img{
+  width: 850px;
+}
+
+div.card3 button:nth-child(1){
+  background: linear-gradient( #222, #333);
+  color: #E6153E;
+  text-shadow: 1px 1px 3px #000;
+  letter-spacing: .5px;
+  margin:20px 20px;
+  padding: 10px 15px;
+  border: 1px  #E6153E solid;
+  border-radius: 20px;
+  box-shadow: 4px 3px 2px #111;
+  font-weight: bold;
+  transition: .5s; 
+  cursor: url(../cursor/link.cur),default;
+  scale: 1;
+}
+
+div.card3 button{
+  background: linear-gradient( #E6153E, #a6153E);
+  color: #ddd;
+  text-shadow: 1px 1px 3px #000;
+  letter-spacing: .5px;
+  margin:20px 20px;
+  padding: 10px 15px;
+  border: 1px #111 solid;
+  border-radius: 20px;
+  box-shadow: 4px 3px 2px #111;
+  font-weight: bold;
+  transition: .5s; 
+  cursor: url(../cursor/link.cur),default;
+  scale: 1;
+}
+
+div.card3 button:hover{
+  scale: 1.1;
+}
+/* -- card 4 -- */
+
+div.card4 h3{
+   color: #00DEDA;
+}
+
+div.card4 span{
+  color:#00DEDA;
+}
+
+div.card4 button:nth-child(1){
+  background: linear-gradient( #222, #333);
+  color: #00DEDA;;
+  text-shadow: 1px 1px 3px #000;
+  letter-spacing: .5px;
+  margin:20px 20px;
+  padding: 10px 15px;
+  border: 1px  #00DEDA solid;
+  border-radius: 20px;
+  box-shadow: 4px 3px 2px #111;
+  font-weight: bold;
+  transition: .5s; 
+  cursor: url(../cursor/link.cur),default;
+  scale: 1;
+}
+
+div.card4 button{
+  background: linear-gradient( #00DEDA, #009aaa);
+  color: #ddd;
+  text-shadow: 1px 1px 3px #000;
+  letter-spacing: .5px;
+  margin:20px 20px;
+  padding: 10px 15px;
+  border: 1px #111 solid;
+  border-radius: 20px;
+  box-shadow: 4px 3px 2px #111;
+  font-weight: bold;
+  transition: .5s; 
+  cursor: url(../cursor/link.cur),default;
+  scale: 1;
+}
+
+div.card4 button:hover{
+  scale: 1.1;
+}
+
+/* -- card 5 --*/
+
+div.card5 h3{
+   color: #1367E0;
+}
+
+div.card5 span{
+  color:#E5AE24;
+}
+
+
+div.card5 .flex-explication{
+  padding-right: 50px;
+   order: 1;
+}
+
+div.card5 button:nth-child(1){
+  background: linear-gradient( #222, #333);
+  color: #E5AE24;
+  text-shadow: 1px 1px 3px #000;
+  letter-spacing: .5px;
+  margin:20px 20px;
+  padding: 10px 15px;
+  border: 1px  #E5AE24 solid;
+  border-radius: 20px;
+  box-shadow: 4px 3px 2px #111;
+  font-weight: bold;
+  transition: .5s; 
+  cursor: url(../cursor/link.cur),default;
+  scale: 1;
+}
+
+div.card5 button{
+  background: linear-gradient( #E5AE24, #E57E24);
+  color: #ddd;
+  text-shadow: 1px 1px 3px #000;
+  letter-spacing: .5px;
+  margin:20px 20px;
+  padding: 10px 15px;
+  border: 1px #111 solid;
+  border-radius: 20px;
+  box-shadow: 4px 3px 2px #111;
+  font-weight: bold;
+  transition: .5s; 
+  cursor: url(../cursor/link.cur),default;
+  scale: 1;
+}
+
+div.card5 button:hover{
+  scale: 1.1;
+}
+
+/*-- card 6 --*/
+
+div.card6 h3{
+   color:#4F87E0 ;
+}
+
+div.card6 span{
+  color:#46C3E0;
+}
+
+div.card6 button:nth-child(1){
+  background: linear-gradient( #222, #333);
+  color: #4F87E0 ;
+  text-shadow: 1px 1px 3px #000;
+  letter-spacing: .5px;
+  margin:20px 20px;
+  padding: 10px 15px;
+  border: 1px  #4F87E0  solid;
+  border-radius: 20px;
+  box-shadow: 4px 3px 2px #111;
+  font-weight: bold;
+  transition: .5s; 
+  cursor: url(../cursor/link.cur),default;
+  scale: 1;
+}
+
+div.card6 button{
+  background: linear-gradient( #4F87E0 , #4F57E0 );
+  color: #ddd;
+  text-shadow: 1px 1px 3px #000;
+  letter-spacing: .5px;
+  margin:20px 20px;
+  padding: 10px 15px;
+  border: 1px #111 solid;
+  border-radius: 20px;
+  box-shadow: 4px 3px 2px #111;
+  font-weight: bold;
+  transition: .5s; 
+  cursor: url(../cursor/link.cur),default;
+  scale: 1;
+}
+
+div.card6 button:hover{
+  scale: 1.1;
+}
+
+/*-- card 7 --*/
+
+div.card7 h3{
+   color:#4E5FE0;
+}
+
+
+div.card7 .flex-explication{
+  padding-right: 50px;
+   order: 1;
+}
+
+div.card7 span{
+  color:#4E5FE0;
+}
+
+div.card7 button:nth-child(1){
+  background: linear-gradient( #222, #333);
+  color: #4E5FE0;
+  text-shadow: 1px 1px 3px #000;
+  letter-spacing: .5px;
+  margin:20px 20px;
+  padding: 10px 15px;
+  border: 1px  #4E5FE0 solid;
+  border-radius: 20px;
+  box-shadow: 4px 3px 2px #111;
+  font-weight: bold;
+  transition: .5s; 
+  cursor: url(../cursor/link.cur),default;
+  scale: 1;
+}
+
+div.card7 button{
+  background: linear-gradient( #4E5FE0, #4E51E0);
+  color: #ddd;
+  text-shadow: 1px 1px 3px #000;
+  letter-spacing: .5px;
+  margin:20px 20px;
+  padding: 10px 15px;
+  border: 1px #111 solid;
+  border-radius: 20px;
+  box-shadow: 4px 3px 2px #111;
+  font-weight: bold;
+  transition: .5s; 
+  cursor: url(../cursor/link.cur),default;
+  scale: 1;
+}
+
+div.card7 button:hover{
+  scale: 1.1;
+}
+
+/*-- card 8 --*/
+
+div.card8 h3{
+   color:#39E1AA;
+}
+
+div.card8 span{
+  color:#39E1AA;
+}
+
+div.card8 button:nth-child(1){
+  background: linear-gradient( #222, #333);
+  color: #39E1AA;
+  text-shadow: 1px 1px 3px #000;
+  letter-spacing: .5px;
+  margin:20px 20px;
+  padding: 10px 15px;
+  border: 1px  #39E1AA solid;
+  border-radius: 20px;
+  box-shadow: 4px 3px 2px #111;
+  font-weight: bold;
+  transition: .5s; 
+  cursor: url(../cursor/link.cur),default;
+  scale: 1;
+}
+
+div.card8 button{
+  background: linear-gradient( #39E1AA, #01a061);
+  color: #ddd;
+  text-shadow: 1px 1px 3px #000;
+  letter-spacing: .5px;
+  margin:20px 20px;
+  padding: 10px 15px;
+  border: 1px #111 solid;
+  border-radius: 20px;
+  box-shadow: 4px 3px 2px #111;
+  font-weight: bold;
+  transition: .5s; 
+  cursor: url(../cursor/link.cur),default;
+  scale: 1;
+}
+
+div.card8 button:hover{
+  scale: 1.1;
+}
+/*-- card 9 --*/
+
+
+div.card9 .flex-explication{
+  padding-right: 50px;
+   order: 1;
+}
+
+div.card9 span:nth-child(1){
+  color:#4E5FE0;
+}
+
+
+div.card9 span:nth-child(2){
+  color:#39E1AA;
+}
+
+div.card9 span:nth-child(3){
+  color:#E5AE24;
+}
+
+div.card9 button:nth-child(1){
+  background: linear-gradient( #222, #333);
+  color: #4693E0;
+  text-shadow: 1px 1px 3px #000;
+  letter-spacing: .5px;
+  margin:20px 20px;
+  padding: 10px 15px;
+  border: 1px  #4693E0 solid;
+  border-radius: 20px;
+  box-shadow: 4px 3px 2px #111;
+  font-weight: bold;
+  transition: .5s; 
+  cursor: url(../cursor/link.cur),default;
+  scale: 1;
+}
+
+div.card9 button{
+  background: linear-gradient( #46C3E0, #4693E0);
+  color: #ddd;
+  text-shadow: 1px 1px 3px #000;
+  letter-spacing: .5px;
+  margin:20px 20px;
+  padding: 10px 15px;
+  border: 1px #111 solid;
+  border-radius: 20px;
+  box-shadow: 4px 3px 2px #111;
+  font-weight: bold;
+  transition: .5s; 
+  cursor: url(../cursor/link.cur),default;
+  scale: 1;
+}
+
+div.card9 button:hover{
+  scale: 1.1;
+}
+
+/*-- card 10 --*/
+
+div.card10 .flex-explication{
+  padding-right: 50px;
+   order: 1;
+}
+
+div.card10 span{
+  color:#4E5FE0;
+}
+
+div.card10 button{
+  background: linear-gradient( #4E5FE0, #4E56E0);
+  color: #ddd;
+  text-shadow: 1px 1px 3px #000;
+  letter-spacing: .5px;
+  margin:20px 20px;
+  padding: 10px 15px;
+  border: 1px #111 solid;
+  border-radius: 20px;
+  box-shadow: 4px 3px 2px #111;
+  font-weight: bold;
+  transition: .5s; 
+  cursor: url(../cursor/link.cur),default;
+  scale: 1;
+}
+
+
+div.card10 button:nth-child(1){
+  background: linear-gradient( #222, #333);
+  color: #4E56E0;
+  text-shadow: 1px 1px 3px #000;
+  letter-spacing: .5px;
+  margin:20px 20px;
+  padding: 10px 15px;
+  border: 1px  #4E56E0 solid;
+  border-radius: 20px;
+  box-shadow: 4px 3px 2px #111;
+  font-weight: bold;
+  transition: .5s; 
+  cursor: url(../cursor/link.cur),default;
+  scale: 1;
+}
+
+div.card10 button:hover{
+  scale: 1.1;
+}
